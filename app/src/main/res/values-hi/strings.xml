@@ -767,7 +767,7 @@
     <string name="set_lfm_disc_title">Last.fm को डिस्कनेक्ट करें?</string>
     <string name="set_lfm_disc_text">वैश्विक स्क्रैबल्स रुक गए। आपके आँकड़े स्थानीय श्रवण इतिहास पर स्विच हो जाते हैं - कुछ भी नहीं हटाया जाता है।</string>
     <string name="set_lfm_disc_btn">डिस्कनेक्ट करें</string>
-    <string name="set_about_title">Echo</string>
+    <string name="set_about_title">LastWave</string>
     <string name="set_color_title">कस्टम रंग</string>
     <string name="set_hue">रंग</string>
     <string name="set_sat">संतृप्ति</string>

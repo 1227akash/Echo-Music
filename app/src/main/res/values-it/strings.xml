@@ -817,7 +817,7 @@
     <string name="set_lfm_disc_title">Disconnettere Last.fm?</string>
     <string name="set_lfm_disc_text">Gli scrobble globali si mettono in pausa. Le Statistiche passano alla cronologia locale: non viene eliminato nulla.</string>
     <string name="set_lfm_disc_btn">Disconnetti</string>
-    <string name="set_about_title">Echo</string>
+    <string name="set_about_title">LastWave</string>
     <string name="set_color_title">Colore personalizzato</string>
     <string name="set_hue">Tonalità</string>
     <string name="set_sat">Saturazione</string>
