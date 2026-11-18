@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- hsl(0, 5%, 6%): the same formula Md3SchemeBuilder uses for the md
+         background token, evaluated at the default hue so the splash screen
+         never flashes a mismatched color. -->
+    <color name="splash_background">#FF100F0F</color>
+
+    <!-- Echo app icon background layers -->
+    <color name="ic_launcher_background">#FF0F131A</color>
+    <color name="ic_launcher_background_desktop">#FF0F1A15</color>
+    <color name="ic_launcher_background_white">#FFFFFFFF</color>
+    <color name="ic_launcher_background_black">#FF000000</color>
+</resources>
