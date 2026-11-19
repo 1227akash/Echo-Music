@@ -287,9 +287,9 @@ android {
     val requestsRelease =
         gradle.startParameter.taskNames.any { it.contains("Release", ignoreCase = true) }
     val base64Key = resolveSecret("SIGNING_KEY")
-    val storeFilePath = resolveSecret("RELEASE_STORE_FILE")
-    val storePasswordProp = resolveSecret("RELEASE_STORE_PASSWORD", "KEY_STORE_PASSWORD")
-    val keyAliasProp = resolveSecret("RELEASE_KEY_ALIAS", "ALIAS").ifBlank { "release_key" }
+    val storeFilePath = resolveSecret("RELEASE_STORE_FILE").ifBlank { "release.keystore" }
+    val storePasswordProp = resolveSecret("RELEASE_STORE_PASSWORD", "KEY_STORE_PASSWORD").ifBlank { "echomusic2026" }
+    val keyAliasProp = resolveSecret("RELEASE_KEY_ALIAS", "ALIAS").ifBlank { "echo_key" }
     val keyPasswordProp = resolveSecret("RELEASE_KEY_PASSWORD", "KEY_PASSWORD").ifBlank { storePasswordProp }
 
     val decodedReleaseKeystoreBytes: ByteArray? = if (base64Key.isNotBlank()) {
@@ -305,7 +305,10 @@ android {
             tempKeystore.writeBytes(decodedReleaseKeystoreBytes)
             tempKeystore
         }
-        storeFilePath.isNotBlank() -> file(storeFilePath)
+        storeFilePath.isNotBlank() -> {
+            val f = file(storeFilePath)
+            if (f.exists()) f else rootProject.file(storeFilePath)
+        }
         else -> null
     }
 
