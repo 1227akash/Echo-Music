@@ -1,0 +1,8 @@
+HSPLcom/echo_music/app/MainActivity;->**(**)**
+HSPLcom/echo_music/app/MainShellActivity;->**(**)**
+HSPLcom/echo_music/app/Echo MusicApplication;->**(**)**
+HSPLcom/echo_music/app/ui/**;->**(**)**
+HSPLcom/echo_music/app/playback/MusicPlayer**;->**(**)**
+HSPLcom/echo_music/app/playback/MusicPlaybackService**;->**(**)**
+HSPLcom/echo_music/app/data/artwork/**;->**(**)**
+Lcom/echo_music/app/ui/**;

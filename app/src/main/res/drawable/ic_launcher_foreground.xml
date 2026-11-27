@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Echo Music Wave & Vinyl Icon -->
+    <path
+        android:fillColor="#012226"
+        android:pathData="M24,48 A3.5,3.5 0 0 1 31,48 L31,60 A3.5,3.5 0 0 1 24,60 Z" />
+    <path
+        android:fillColor="#012226"
+        android:pathData="M36,38 A3.5,3.5 0 0 1 43,38 L43,70 A3.5,3.5 0 0 1 36,70 Z" />
+    <path
+        android:fillColor="#012226"
+        android:pathData="M48,28 A3.5,3.5 0 0 1 55,28 L55,80 A3.5,3.5 0 0 1 48,80 Z" />
+    <path
+        android:fillColor="#012226"
+        android:pathData="M60,34 A3.5,3.5 0 0 1 67,34 L67,74 A3.5,3.5 0 0 1 60,74 Z" />
+    <path
+        android:fillColor="#012226"
+        android:pathData="M72,42 A3.5,3.5 0 0 1 79,42 L79,66 A3.5,3.5 0 0 1 72,66 Z" />
+    <path
+        android:fillColor="#012226"
+        android:pathData="M84,50 A3.5,3.5 0 0 1 91,50 L91,58 A3.5,3.5 0 0 1 84,58 Z" />
+</vector>
