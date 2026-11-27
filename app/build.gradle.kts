@@ -533,7 +533,7 @@ dependencies {
     // the same Android trust path as the app's working OkHttp requests. CIO
     // remains a fallback; the Android engine closed streams on cancellation.
     runtimeOnly("io.ktor:ktor-client-okhttp:3.6.0")
-    runtimeOnly("io.ktor:ktor-client-cio:3.6.0")
+    runtimeOnly("io.ktor:ktor-client-cio:3.6.1")
 
     // Unit Testing dependencies
     testImplementation("junit:junit:4.13.2")
