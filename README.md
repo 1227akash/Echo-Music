@@ -2,6 +2,10 @@
 
 <img src="assets/EchoMusic_banner.png" alt="Echo Music Banner" width="100%" style="border-radius: 16px;" />
 
+<br/><br/>
+
+<img src="assets/EchoMusic_showcase_banner.png" alt="Echo Music App Showcase" width="100%" style="border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.5);" />
+
 <h1>Echo Music</h1>
 
 **Simple Android YouTube Music client with Material UI, Liquid Glass, Bit-Perfect playback, Automix, Lossless addons & advanced audiophile features.**
