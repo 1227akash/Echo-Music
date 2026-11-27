@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/LastWave_banner_v2_1440p.png" alt="Echo Music Banner" width="100%" style="border-radius: 16px;" />
+<img src="assets/EchoMusic_banner.png" alt="Echo Music Banner" width="100%" style="border-radius: 16px;" />
 
 <h1>Echo Music</h1>
 
