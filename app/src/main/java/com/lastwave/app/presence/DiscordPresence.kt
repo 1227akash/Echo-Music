@@ -149,7 +149,7 @@ object DiscordPresence {
      */
     fun activityName(title: String): String {
         val trimmed = title.trim()
-        return if (trimmed.isEmpty()) "LastWave" else "LastWave \u00B7 " + clip(trimmed)
+        return if (trimmed.isEmpty()) "Echo Music" else "LastWave \u00B7 " + clip(trimmed)
     }
 
     /**
@@ -162,7 +162,7 @@ object DiscordPresence {
      * visible on both platforms, so the audio format never depends on hovering.
      */
     fun stateLine(artist: String, album: String?, quality: String): String {
-        val head = artist.trim().ifEmpty { album?.trim()?.takeIf { it.isNotEmpty() } ?: "LastWave" }
+        val head = artist.trim().ifEmpty { album?.trim()?.takeIf { it.isNotEmpty() } ?: "Echo Music" }
         return clip(if (quality.isEmpty()) head else "$head \u00B7 $quality", MAX_STATE)
     }
 
@@ -303,7 +303,7 @@ object DiscordPresence {
             when {
                 !playing && quality.isEmpty() -> "LastWave \u00B7 Paused"
                 !playing -> "LastWave \u00B7 Paused \u00B7 $quality"
-                quality.isEmpty() -> "LastWave"
+                quality.isEmpty() -> "Echo Music"
                 else -> "LastWave \u00B7 $quality"
             },
         )

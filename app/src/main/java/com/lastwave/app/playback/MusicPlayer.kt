@@ -2657,7 +2657,7 @@ class MusicPlayer @Inject constructor(
 
     fun play(
         track: PlayableTrack,
-        sourceLabel: String = "LastWave",
+        sourceLabel: String = "Echo Music",
         startRadio: Boolean = true,
         startPositionMs: Long = 0L,
         playWhenReady: Boolean = true,
@@ -2694,7 +2694,7 @@ class MusicPlayer @Inject constructor(
     fun playQueue(
         tracks: List<PlayableTrack>,
         startIndex: Int = 0,
-        sourceLabel: String = "LastWave",
+        sourceLabel: String = "Echo Music",
         startShuffled: Boolean = false,
         enableRadioContinuation: Boolean = false,
     ) {
@@ -2751,7 +2751,7 @@ class MusicPlayer @Inject constructor(
         tracks: List<PlayableTrack>,
         startIndex: Int,
         endlessDiscover: Boolean,
-        sourceLabel: String = if (endlessDiscover) "Discover" else "LastWave",
+        sourceLabel: String = if (endlessDiscover) "Discover" else "Echo Music",
         startShuffled: Boolean = false,
         enableRadioContinuation: Boolean = false,
     ) {
@@ -6143,7 +6143,7 @@ class MusicPlayer @Inject constructor(
         // files was blocking playback even when the YouTube URL was cached.
         if (!deepScan) return null
 
-        // 4. Fallback: Search physical download directories (Music/<folder> + legacy Music/LastWave)
+        // 4. Fallback: Search physical download directories (Music/<folder> + legacy Music/EchoMusic)
         val candidateExtensions = listOf("flac", "m4a", "mp3", "opus", "ogg", "webm", "wav")
         val candidateBases = listOf(
             "$artist - $title",

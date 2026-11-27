@@ -202,7 +202,7 @@ class AppleMusicLyricsApi @Inject constructor(
     }
 
     companion object {
-        const val USER_AGENT = "LastWave"
+        const val USER_AGENT = "Echo Music"
 
         /** Syllable envelope -> [LyricLine]. `part` words continue the
          *  previous token ("with"+"drawals"); background vocals ride along

@@ -18,7 +18,7 @@ import java.net.URLEncoder
 import javax.inject.Inject
 import javax.inject.Singleton
 
-private const val GENIUS_UA = "LastWave"
+private const val GENIUS_UA = "Echo Music"
 private const val SKIP_SELECTOR =
     "[data-exclude-from-selection=true], .LyricsHeader__Container, .SongBioPreview__Container, .InreadAd__Container, button, script, style"
 

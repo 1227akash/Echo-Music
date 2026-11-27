@@ -155,7 +155,7 @@ class ListenBrainzClient @Inject constructor(
                         put("track_name", listen.track)
                         if (!listen.album.isNullOrBlank()) put("release_name", listen.album)
                         put("additional_info", buildJsonObject {
-                            put("media_player", "LastWave")
+                            put("media_player", "Echo Music")
                             put("submission_client", "LastWave Android")
                             put("submission_client_version", BuildConfig.VERSION_NAME)
                         })
