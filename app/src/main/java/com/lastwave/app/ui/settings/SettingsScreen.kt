@@ -655,26 +655,6 @@ fun SettingsScreen(
             ) {
                 when (tab) {
                     null -> {
-                        item {
-                            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                SectionLabel("Collaboration & Social")
-                                SettingsGroup(rowCount = 1) { _, position ->
-                                    SettingsActionCard(
-                                        icon = Icons.Filled.Group,
-                                        iconContainer = MaterialTheme.colorScheme.primaryContainer,
-                                        iconTint = MaterialTheme.colorScheme.onPrimaryContainer,
-                                        title = stringResource(R.string.settings_jam_title),
-                                        subtitle = if (jamUiState.isConnected) {
-                                            "In Session: #${jamUiState.roomCode} \u2022 ${jamUiState.participants.size} listening together"
-                                        } else {
-                                            stringResource(R.string.settings_jam_sub)
-                                        },
-                                        onClick = onOpenJam,
-                                        position = position,
-                                    )
-                                }
-                            }
-                        }
 
                         item {
                             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -1221,7 +1201,7 @@ fun SettingsScreen(
                         item {
                 Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     SectionLabel(stringResource(R.string.settings_section_appearance))
-                    SettingsGroup(rowCount = 15) { index, position ->
+                    SettingsGroup(rowCount = 8) { index, position ->
                         when (index) {
                             0 -> ThemeModeSelectorCard(
                                 currentThemeMode = theme?.themeMode ?: ThemeMode.SYSTEM,
@@ -1236,17 +1216,6 @@ fun SettingsScreen(
                                 isHighlighted = (highlightedSettingId == "appearance.app_icon"),
                             )
                             2 -> SettingsToggleCard(
-                                icon = Icons.Filled.AutoAwesome,
-                                iconContainer = MaterialTheme.colorScheme.primaryContainer,
-                                iconTint = MaterialTheme.colorScheme.onPrimaryContainer,
-                                title = stringResource(R.string.settings_echo_music_theme),
-                                subtitle = stringResource(R.string.settings_echo_music_theme_sub),
-                                checked = theme?.isLastWaveTheme ?: false,
-                                onCheckedChange = viewModel::setLastWaveTheme,
-                                position = position,
-                                isHighlighted = (highlightedSettingId == "appearance.lastwave_theme"),
-                            )
-                            3 -> SettingsToggleCard(
                                 icon = Icons.Filled.Contrast,
                                 iconContainer = MaterialTheme.colorScheme.tertiaryContainer,
                                 iconTint = MaterialTheme.colorScheme.onTertiaryContainer,
@@ -1258,19 +1227,7 @@ fun SettingsScreen(
                                 position = position,
                                 isHighlighted = (highlightedSettingId == "appearance.amoled"),
                             )
-                            4 -> SettingsToggleCard(
-                                icon = Icons.Filled.Palette,
-                                iconContainer = MaterialTheme.colorScheme.secondaryContainer,
-                                iconTint = MaterialTheme.colorScheme.onSecondaryContainer,
-                                title = stringResource(R.string.settings_legacy_colors),
-                                subtitle = stringResource(R.string.settings_legacy_colors_sub),
-                                checked = theme?.useLegacyColors ?: false,
-                                enabled = !(theme?.amoled ?: false),
-                                onCheckedChange = viewModel::setLegacyColors,
-                                position = position,
-                                isHighlighted = (highlightedSettingId == "appearance.legacy_colors"),
-                            )
-                            5 -> SettingsToggleCard(
+                            3 -> SettingsToggleCard(
                                 icon = Icons.Filled.Palette,
                                 iconContainer = MaterialTheme.colorScheme.primaryContainer,
                                 iconTint = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -1286,7 +1243,7 @@ fun SettingsScreen(
                                 position = position,
                                 isHighlighted = (highlightedSettingId == "appearance.dynamic_color"),
                             )
-                            6 -> SettingsToggleCard(
+                            4 -> SettingsToggleCard(
                                 icon = Icons.Filled.BubbleChart,
                                 iconContainer = MaterialTheme.colorScheme.primaryContainer,
                                 iconTint = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -1297,29 +1254,7 @@ fun SettingsScreen(
                                 position = position,
                                 isHighlighted = (highlightedSettingId == "appearance.liquid_glass"),
                             )
-                            7 -> SettingsToggleCard(
-                                icon = Icons.Filled.Apps,
-                                iconContainer = MaterialTheme.colorScheme.tertiaryContainer,
-                                iconTint = MaterialTheme.colorScheme.onTertiaryContainer,
-                                title = stringResource(R.string.settings_md3_nav_bar),
-                                subtitle = stringResource(R.string.settings_md3_nav_bar_sub),
-                                checked = theme?.md3NavBar ?: false,
-                                onCheckedChange = viewModel::setMd3NavBar,
-                                position = position,
-                                isHighlighted = (highlightedSettingId == "appearance.md3_nav_bar"),
-                            )
-                            8 -> SettingsToggleCard(
-                                icon = Icons.Filled.VisibilityOff,
-                                iconContainer = MaterialTheme.colorScheme.secondaryContainer,
-                                iconTint = MaterialTheme.colorScheme.onSecondaryContainer,
-                                title = stringResource(R.string.settings_hide_nav_tabs),
-                                subtitle = stringResource(R.string.settings_hide_nav_tabs_sub),
-                                checked = theme?.hideNavTabs ?: false,
-                                onCheckedChange = viewModel::setHideNavTabs,
-                                position = position,
-                                isHighlighted = (highlightedSettingId == "appearance.hide_nav_tabs"),
-                            )
-                            6 -> SettingsToggleCard(
+                            5 -> SettingsToggleCard(
                                 icon = Icons.Filled.ColorLens,
                                 iconContainer = MaterialTheme.colorScheme.tertiaryContainer,
                                 iconTint = MaterialTheme.colorScheme.onTertiaryContainer,
@@ -1330,7 +1265,7 @@ fun SettingsScreen(
                                 position = position,
                                 isHighlighted = (highlightedSettingId == "appearance.dynamic_now_playing"),
                             )
-                            7 -> SettingsToggleCard(
+                            6 -> SettingsToggleCard(
                                 icon = Icons.Filled.TextFields,
                                 iconContainer = MaterialTheme.colorScheme.secondaryContainer,
                                 iconTint = MaterialTheme.colorScheme.onSecondaryContainer,
@@ -1341,17 +1276,7 @@ fun SettingsScreen(
                                 position = position,
                                 isHighlighted = (highlightedSettingId == "appearance.app_font"),
                             )
-                            8 -> SettingsToggleCard(
-                                icon = Icons.Filled.FormatBold,
-                                iconContainer = MaterialTheme.colorScheme.primaryContainer,
-                                iconTint = MaterialTheme.colorScheme.onPrimaryContainer,
-                                title = stringResource(R.string.settings_bold_font),
-                                subtitle = stringResource(R.string.settings_bold_font_sub),
-                                checked = misc.useBoldFont,
-                                onCheckedChange = viewModel::setUseBoldFont,
-                                position = position,
-                            )
-                            9 -> SettingsToggleCard(
+                            7 -> SettingsToggleCard(
                                 icon = Icons.Filled.Vibration,
                                 iconContainer = MaterialTheme.colorScheme.primaryContainer,
                                 iconTint = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -1362,68 +1287,6 @@ fun SettingsScreen(
                                 position = position,
                                 isHighlighted = (highlightedSettingId == "appearance.ui_haptics"),
                             )
-                            13 -> SettingsToggleCard(
-                                icon = Icons.Filled.VerticalAlignBottom,
-                                iconContainer = MaterialTheme.colorScheme.secondaryContainer,
-                                iconTint = MaterialTheme.colorScheme.onSecondaryContainer,
-                                title = stringResource(R.string.settings_collapsing_nav_bar),
-                                subtitle = stringResource(R.string.settings_collapsing_nav_bar_sub),
-                                checked = misc.collapsingNavBar,
-                                onCheckedChange = viewModel::setCollapsingNavBar,
-                                position = position,
-                                isHighlighted = (highlightedSettingId == "appearance.collapsing_nav_bar"),
-                            )
-                            14 -> SettingsToggleCard(
-                                icon = Icons.Filled.MoreVert,
-                                iconContainer = MaterialTheme.colorScheme.secondaryContainer,
-                                iconTint = MaterialTheme.colorScheme.onSecondaryContainer,
-                                title = stringResource(R.string.settings_legacy_track_menu),
-                                subtitle = stringResource(R.string.settings_legacy_track_menu_sub),
-                                checked = misc.useLegacyTrackMenu,
-                                onCheckedChange = viewModel::setLegacyTrackMenu,
-                                position = position,
-                                isHighlighted = (highlightedSettingId == "appearance.legacy_track_menu"),
-                            )
-                        }
-                    }
-                }
-            }
-
-                        item {
-                Column {
-                    SectionLabel(stringResource(R.string.settings_section_accent))
-                    Spacer(Modifier.height(10.dp))
-                    Card(
-                        shape = CardOuterShape,
-                        colors = CardDefaults.cardColors(
-                            containerColor = if (highlightedSettingId == "appearance.accent_preset") MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.25f) else MaterialTheme.colorScheme.surfaceContainerHigh
-                        ),
-                        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .settingHighlightGlow(
-                                isHighlighted = (highlightedSettingId == "appearance.accent_preset"),
-                                shape = CardOuterShape,
-                            ),
-                    ) {
-                        Column(Modifier.padding(20.dp)) {
-                            AccentPresetGrid(
-                                currentMode = theme?.mode ?: AccentMode.MANUAL,
-                                selectedHex = theme?.accentColorHex,
-                                onPickPreset = { hex ->
-                                    if (theme?.isLastWaveTheme == true) {
-                                        viewModel.setLastWaveTheme(false)
-                                    }
-                                    viewModel.setManualAccent(Color(android.graphics.Color.parseColor(hex)))
-                                },
-                                onPickMono = {
-                                    if (theme?.isLastWaveTheme == true) {
-                                        viewModel.setLastWaveTheme(false)
-                                    }
-                                    viewModel.setAccentMode(AccentMode.MONOCHROME)
-                                },
-                                onPickCustom = viewModel::openColorWheel,
-                            )
                         }
                     }
                 }
@@ -1432,24 +1295,9 @@ fun SettingsScreen(
                         item {
                 Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     SectionLabel(stringResource(R.string.settings_section_experimental))
-                    SettingsGroup(rowCount = 6) { index, position ->
+                    SettingsGroup(rowCount = 3) { index, position ->
                         when (index) {
-                            0 -> SettingsToggleCard(
-                                icon = Icons.Filled.Subtitles,
-                                iconContainer = MaterialTheme.colorScheme.tertiaryContainer,
-                                iconTint = MaterialTheme.colorScheme.onTertiaryContainer,
-                                title = "Word-by-word lyrics",
-                                subtitle = if (misc.wordByWordLyrics) {
-                                    "Real-time syllable sync & karaoke highlight"
-                                } else {
-                                    "Line-by-line synced lyrics"
-                                },
-                                checked = misc.wordByWordLyrics,
-                                onCheckedChange = viewModel::setWordByWordLyrics,
-                                position = position,
-                                isHighlighted = (highlightedSettingId == "appearance.word_by_word_lyrics"),
-                            )
-                            1 -> SettingsActionCard(
+                            0 -> SettingsActionCard(
                                 icon = Icons.Filled.Waves,
                                 iconContainer = MaterialTheme.colorScheme.secondaryContainer,
                                 iconTint = MaterialTheme.colorScheme.onSecondaryContainer,
@@ -1463,7 +1311,7 @@ fun SettingsScreen(
                                 position = position,
                                 isHighlighted = (highlightedSettingId == "appearance.wavy_seekbar"),
                             )
-                            2 -> SettingsToggleCard(
+                            1 -> SettingsToggleCard(
                                 icon = Icons.Filled.RotateRight,
                                 iconContainer = MaterialTheme.colorScheme.primaryContainer,
                                 iconTint = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -1478,22 +1326,7 @@ fun SettingsScreen(
                                 position = position,
                                 isHighlighted = (highlightedSettingId == "appearance.rotating_background"),
                             )
-                            3 -> SettingsToggleCard(
-                                icon = Icons.Filled.Animation,
-                                iconContainer = MaterialTheme.colorScheme.primaryContainer,
-                                iconTint = MaterialTheme.colorScheme.onPrimaryContainer,
-                                title = stringResource(R.string.settings_lyrics_rotating_background),
-                                subtitle = if (misc.lyricsRotatingBackgroundEnabled) {
-                                    stringResource(R.string.settings_lyrics_rotating_background_on)
-                                } else {
-                                    stringResource(R.string.settings_lyrics_rotating_background_off)
-                                },
-                                checked = misc.lyricsRotatingBackgroundEnabled,
-                                onCheckedChange = viewModel::setLyricsRotatingBackgroundEnabled,
-                                position = position,
-                                isHighlighted = (highlightedSettingId == "appearance.lyrics_rotating_background"),
-                            )
-                            4 -> SettingsToggleCard(
+                            2 -> SettingsToggleCard(
                                 icon = Icons.Filled.Waves,
                                 iconContainer = MaterialTheme.colorScheme.tertiaryContainer,
                                 iconTint = MaterialTheme.colorScheme.onTertiaryContainer,
@@ -1507,16 +1340,6 @@ fun SettingsScreen(
                                 onCheckedChange = viewModel::setFluidBeatSyncEnabled,
                                 position = position,
                                 isHighlighted = (highlightedSettingId == "appearance.fluid_beat_sync"),
-                            )
-                            5 -> SettingsActionCard(
-                                icon = Icons.Filled.Lyrics,
-                                iconContainer = MaterialTheme.colorScheme.tertiaryContainer,
-                                iconTint = MaterialTheme.colorScheme.onTertiaryContainer,
-                                title = stringResource(R.string.settings_lyrics_settings),
-                                subtitle = stringResource(R.string.settings_lyrics_settings_sub),
-                                onClick = { showLyricsSettingsSheet = true },
-                                position = position,
-                                isHighlighted = false,
                             )
                         }
                     }
