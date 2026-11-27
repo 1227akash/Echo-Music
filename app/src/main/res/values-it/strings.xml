@@ -1259,7 +1259,7 @@
     <string name="storage_downloads_deleted">Musica scaricata eliminata</string>
     <string name="storage_operation_failed">Impossibile completare l\'operazione di archiviazione</string>
     <string name="settings_desktop_app">Scarica l\'app desktop</string>
-    <string name="about_made_by">Creato dal team Echo Music</string>
+    <string name="about_made_by">Made by Akash</string>
 
     <string name="home_section_greeting_title">Intestazione di saluto</string>
     <string name="home_section_greeting_sub">Saluto del giorno e data</string>

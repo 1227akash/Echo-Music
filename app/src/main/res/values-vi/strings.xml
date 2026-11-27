@@ -250,7 +250,7 @@
     <string name="settings_check_updates">Kiểm tra cập nhật</string>
     <string name="settings_source_code">Mã nguồn</string>
     <string name="settings_desktop_app">Tải ứng dụng Desktop</string>
-    <string name="about_made_by">Được tạo bởi Echo Music Team</string>
+    <string name="about_made_by">Made by Akash</string>
 
     <!-- Common dialog buttons -->
     <string name="common_cancel">Hủy</string>

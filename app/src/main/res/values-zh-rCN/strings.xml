@@ -1208,7 +1208,7 @@
     <string name="storage_downloads_deleted">已下载音乐已删除</string>
     <string name="storage_operation_failed">无法完成存储操作</string>
     <string name="settings_desktop_app">下载桌面版应用</string>
-    <string name="about_made_by">由 Echo Music 团队精心制作</string>
+    <string name="about_made_by">Made by Akash</string>
     <string name="home_section_greeting_title">问候语头部</string>
     <string name="home_section_greeting_sub">每日问候语与当前日期</string>
     <string name="home_section_infinite_radio_title">无尽电台</string>
