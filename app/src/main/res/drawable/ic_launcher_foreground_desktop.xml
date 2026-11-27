@@ -3,18 +3,34 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Desktop logo bars scaled to fit within adaptive icon 66dp circular safe zone. -->
+    <!-- Echo Wave Rings -->
     <path
-        android:fillColor="#023C42"
-        android:pathData="M32.28,46.56 A4.08,4.08 0 0 1 40.43,46.56 L40.43,62.06 A4.08,4.08 0 0 1 32.28,62.06 Z" />
+        android:fillColor="#00000000"
+        android:strokeColor="#22D3EE"
+        android:strokeAlpha="0.4"
+        android:strokeWidth="2.5"
+        android:pathData="M 54,19 A 35,35 0 1 0 54,89 A 35,35 0 1 0 54,19" />
     <path
-        android:fillColor="#023C42"
-        android:pathData="M44.04,33.90 A4.11,4.11 0 0 1 52.26,33.90 L52.26,73.66 A4.11,4.11 0 0 1 44.04,73.66 Z" />
-    <path
-        android:fillColor="#023C42"
-        android:pathData="M55.87,38.69 A4.11,4.11 0 0 1 64.08,38.69 L64.08,69.49 A4.11,4.11 0 0 1 55.87,69.49 Z" />
-    <path
-        android:fillColor="#023C42"
-        android:pathData="M67.63,46.60 A4.11,4.11 0 0 1 75.84,46.60 L75.84,62.03 A4.11,4.11 0 0 1 67.63,62.03 Z" />
-</vector>
+        android:fillColor="#00000000"
+        android:strokeColor="#38BDF8"
+        android:strokeAlpha="0.7"
+        android:strokeWidth="2.5"
+        android:pathData="M 54,26 A 28,28 0 1 0 54,82 A 28,28 0 1 0 54,26" />
 
+    <!-- Soundwave Bars (Cyan / Teal) -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M 32,46 A 3,3 0 0 1 38,46 L 38,62 A 3,3 0 0 1 32,62 Z" />
+    <path
+        android:fillColor="#06B6D4"
+        android:pathData="M 43,36 A 3,3 0 0 1 49,36 L 49,72 A 3,3 0 0 1 43,72 Z" />
+    <path
+        android:fillColor="#22D3EE"
+        android:pathData="M 54,28 A 3,3 0 0 1 60,28 L 60,80 A 3,3 0 0 1 54,80 Z" />
+    <path
+        android:fillColor="#2DD4BF"
+        android:pathData="M 65,36 A 3,3 0 0 1 71,36 L 71,72 A 3,3 0 0 1 65,72 Z" />
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M 76,46 A 3,3 0 0 1 82,46 L 82,62 A 3,3 0 0 1 76,62 Z" />
+</vector>

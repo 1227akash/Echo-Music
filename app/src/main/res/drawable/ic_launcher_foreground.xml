@@ -3,23 +3,34 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Echo Music Wave & Vinyl Icon -->
+    <!-- Echo Wave Rings -->
     <path
-        android:fillColor="#012226"
-        android:pathData="M24,48 A3.5,3.5 0 0 1 31,48 L31,60 A3.5,3.5 0 0 1 24,60 Z" />
+        android:fillColor="#00000000"
+        android:strokeColor="#22D3EE"
+        android:strokeAlpha="0.4"
+        android:strokeWidth="2.5"
+        android:pathData="M 54,19 A 35,35 0 1 0 54,89 A 35,35 0 1 0 54,19" />
     <path
-        android:fillColor="#012226"
-        android:pathData="M36,38 A3.5,3.5 0 0 1 43,38 L43,70 A3.5,3.5 0 0 1 36,70 Z" />
+        android:fillColor="#00000000"
+        android:strokeColor="#38BDF8"
+        android:strokeAlpha="0.7"
+        android:strokeWidth="2.5"
+        android:pathData="M 54,26 A 28,28 0 1 0 54,82 A 28,28 0 1 0 54,26" />
+
+    <!-- Soundwave Bars (Cyan / Teal) -->
     <path
-        android:fillColor="#012226"
-        android:pathData="M48,28 A3.5,3.5 0 0 1 55,28 L55,80 A3.5,3.5 0 0 1 48,80 Z" />
+        android:fillColor="#38BDF8"
+        android:pathData="M 32,46 A 3,3 0 0 1 38,46 L 38,62 A 3,3 0 0 1 32,62 Z" />
     <path
-        android:fillColor="#012226"
-        android:pathData="M60,34 A3.5,3.5 0 0 1 67,34 L67,74 A3.5,3.5 0 0 1 60,74 Z" />
+        android:fillColor="#06B6D4"
+        android:pathData="M 43,36 A 3,3 0 0 1 49,36 L 49,72 A 3,3 0 0 1 43,72 Z" />
     <path
-        android:fillColor="#012226"
-        android:pathData="M72,42 A3.5,3.5 0 0 1 79,42 L79,66 A3.5,3.5 0 0 1 72,66 Z" />
+        android:fillColor="#22D3EE"
+        android:pathData="M 54,28 A 3,3 0 0 1 60,28 L 60,80 A 3,3 0 0 1 54,80 Z" />
     <path
-        android:fillColor="#012226"
-        android:pathData="M84,50 A3.5,3.5 0 0 1 91,50 L91,58 A3.5,3.5 0 0 1 84,58 Z" />
+        android:fillColor="#2DD4BF"
+        android:pathData="M 65,36 A 3,3 0 0 1 71,36 L 71,72 A 3,3 0 0 1 65,72 Z" />
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M 76,46 A 3,3 0 0 1 82,46 L 82,62 A 3,3 0 0 1 76,62 Z" />
 </vector>
